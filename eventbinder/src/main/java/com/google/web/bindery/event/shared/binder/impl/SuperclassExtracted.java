@@ -6,6 +6,12 @@ import java.util.List;
 
 public class SuperclassExtracted extends GwtEvent.Type<GenericEventHandler> {
 
+    public static final String CONST = "123465789";
+
+    private String attr1;
+    private String attr2;
+    private String attr3;
+
     public SuperclassExtracted() {
         super();
     }
