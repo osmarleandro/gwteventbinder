@@ -33,9 +33,6 @@ public class GenericEventType extends SuperclassExtracted {
 
   private static final Map<Class<?>, GenericEventType> TYPE_MAP =
       new HashMap<Class<?>, GenericEventType>();
-  private String attr1;
-  private String attr2;
-  private String attr3;
 
   /**
    * Creates a new EventType for the given event class. Repeated invocations of
