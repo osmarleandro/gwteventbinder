@@ -56,7 +56,9 @@ class EventBinderWriter {
         writeHandlerForBindMethod(annotation, writer, method, typeOracle);
       }
     }
-    writeBindMethodFooter(writer);
+    writer.println("return registrations;");
+	writer.outdent();
+	writer.println("}");
   }
 
   private void writeBindMethodHeader(SourceWriter writer, String targetName) {
