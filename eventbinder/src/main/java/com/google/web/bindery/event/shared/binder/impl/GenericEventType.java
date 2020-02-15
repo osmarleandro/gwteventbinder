@@ -29,7 +29,7 @@ import java.util.Map;
  *
  * @author ekuefler@google.com (Erik Kuefler)
  */
-public class GenericEventType extends Type<GenericEventHandler> {
+public class GenericEventType extends SuperclassExtracted {
 
   private static final Map<Class<?>, GenericEventType> TYPE_MAP =
       new HashMap<Class<?>, GenericEventType>();
