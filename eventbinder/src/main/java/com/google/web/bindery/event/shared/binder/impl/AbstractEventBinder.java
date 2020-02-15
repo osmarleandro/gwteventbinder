@@ -31,7 +31,9 @@ import java.util.List;
  */
 public abstract class AbstractEventBinder<T> implements EventBinder<T> {
 
-  @Override
+  public static final String CONST = "123465789";
+
+@Override
   public final HandlerRegistration bindEventHandlers(T target, EventBus eventBus) {
     final List<HandlerRegistration> registrations = doBindEventHandlers(target, eventBus);
     return new HandlerRegistration() {
