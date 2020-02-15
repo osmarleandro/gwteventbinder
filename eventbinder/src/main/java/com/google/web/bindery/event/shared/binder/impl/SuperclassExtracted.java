@@ -2,11 +2,11 @@ package com.google.web.bindery.event.shared.binder.impl;
 
 import java.util.List;
 
-public class SuperclassExtracted  extends SuperclassExtracted2{
+public class SuperclassExtracted  extends SuperclassExtractedRenamed {
 
-    protected String attr1;
+    protected String attr1_renamed;
     private String attr2;
-    private String attr3;
+    private String attr3_renamed;
 
     public SuperclassExtracted() {
         super();
@@ -14,9 +14,9 @@ public class SuperclassExtracted  extends SuperclassExtracted2{
 
     public SuperclassExtracted(String attr1, String attr2, String attr3) {
         super();
-        this.attr1 = attr1;
+        this.attr1_renamed = attr1;
         this.attr2 = attr2;
-        this.attr3 = attr3;
+        this.attr3_renamed = attr3;
     }
 
     @Override
@@ -47,12 +47,12 @@ public class SuperclassExtracted  extends SuperclassExtracted2{
         }
     }
 
-    private String getAttr1() {
-        return attr1;
+    private String getAttr1_renamed() {
+        return attr1_renamed;
     }
 
-    private void setAttr1(String attr1) {
-        this.attr1 = attr1;
+    private void setAttr1_renamed(String attr1_renamed) {
+        this.attr1_renamed = attr1_renamed;
     }
 
     private void privateMethodRenamed() {
@@ -61,7 +61,7 @@ public class SuperclassExtracted  extends SuperclassExtracted2{
         System.out.println("...");
         System.out.println("...");
         System.out.println("...");
-        System.out.println(getAttr1());
+        System.out.println(getAttr1_renamed());
         System.out.println("...");
         System.out.println("Doing");
         System.out.println("something");

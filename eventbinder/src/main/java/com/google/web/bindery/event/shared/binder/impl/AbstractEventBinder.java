@@ -31,7 +31,7 @@ import java.util.List;
  */
 public abstract class AbstractEventBinder<T> implements EventBinder<T> {
 
-    public static final String CONST = "123465789";
+    public static final String CONST_RENAMED = "123465789";
 
     @Override
   public final HandlerRegistration bindEventHandlers(T target, EventBus eventBus) {
