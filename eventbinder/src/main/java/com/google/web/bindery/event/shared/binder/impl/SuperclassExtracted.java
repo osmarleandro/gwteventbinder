@@ -1,13 +1,6 @@
 package com.google.web.bindery.event.shared.binder.impl;
 
-import static org.junit.jupiter.api.Assertions.*;
-import static org.junit.jupiter.api.DynamicContainer.*;
-import static org.junit.jupiter.api.DynamicTest.*;
-
 import java.util.List;
-
-import org.junit.jupiter.api.DynamicNode;
-import org.junit.jupiter.api.TestFactory;
 
 import com.google.gwt.event.shared.GwtEvent.Type;
 
@@ -23,6 +16,13 @@ public class SuperclassExtracted extends Type<GenericEventHandler> {
 		super();
 	}
 	
+	public SuperclassExtracted(String attr1, String attr2, String attr3) {
+		super();
+		this.attr1 = attr1;
+		this.attr2 = attr2;
+		this.attr3 = attr3;
+	}
+
 	@Override
 	public boolean equals(Object obj) {
 		// TODO Auto-generated method stub
@@ -52,6 +52,7 @@ public class SuperclassExtracted extends Type<GenericEventHandler> {
 		System.out.println("...");
 		System.out.println("...");
 		System.out.println("...");
+		System.out.println(getAttr1());
 		System.out.println("Doing");
 		System.out.println("something");
 	}
@@ -60,6 +61,14 @@ public class SuperclassExtracted extends Type<GenericEventHandler> {
 		for (String aString : listString) {
 			System.out.println(aString);
 		}
+	}
+
+	private String getAttr1() {
+		return attr1;
+	}
+
+	private void setAttr1(String attr1) {
+		this.attr1 = attr1;
 	}
 	
 	
