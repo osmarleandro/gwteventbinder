@@ -56,10 +56,14 @@ class EventBinderWriter {
         writeHandlerForBindMethod(annotation, writer, method, typeOracle);
       }
     }
-    writer.println("return registrations;");
+    extracted(writer);
+  }
+
+private void extracted(SourceWriter writer) {
+	writer.println("return registrations;");
 	writer.outdent();
 	writer.println("}");
-  }
+}
 
   private void writeBindMethodHeader(SourceWriter writer, String targetName) {
     writer.println("protected List<HandlerRegistration> doBindEventHandlers("
@@ -122,8 +126,6 @@ class EventBinderWriter {
   }
 
   private void writeBindMethodFooter(SourceWriter writer) {
-    writer.println("return registrations;");
-    writer.outdent();
-    writer.println("}");
+    extracted(writer);
   }
 }
