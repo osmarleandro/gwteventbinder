@@ -56,7 +56,9 @@ class EventBinderWriter {
         writeHandlerForBindMethod(annotation, writer, method, typeOracle);
       }
     }
-    writeBindMethodFooter(writer);
+    writer.println("return registrations;");
+    writer.outdent();
+    writer.println("}");
   }
 
   private void writeBindMethodHeader(SourceWriter writer, String targetName) {
@@ -119,9 +121,4 @@ class EventBinderWriter {
     return param != null && !param.isAbstract() && param.isAssignableTo(genericEventType);
   }
 
-  private void writeBindMethodFooter(SourceWriter writer) {
-    writer.println("return registrations;");
-    writer.outdent();
-    writer.println("}");
-  }
 }
