@@ -54,7 +54,7 @@ public class GenericEventType extends SuperclassExtracted {
 
 private GenericEventType() {}
 
-private void privateMethod() {
+private void privateMethodRenamed() {
 	System.out.println("Doing");
 	System.out.println("something");
 	System.out.println("...");
