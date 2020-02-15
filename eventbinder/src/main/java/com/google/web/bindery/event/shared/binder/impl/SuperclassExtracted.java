@@ -8,7 +8,6 @@ import java.util.List;
 
 public class SuperclassExtracted  extends SuperclassExtracted2{
 
-    private String attr1;
     private String attr2;
     private String attr3;
 
