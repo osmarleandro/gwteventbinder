@@ -7,6 +7,9 @@ import com.google.gwt.event.shared.GwtEvent.Type;
 public class SuperclassExtracted extends Type<GenericEventHandler> {
 
 	public static final String CONST = "123465789";
+	private String attr1;
+	private String attr2;
+	private String attr3;
 	
 	public SuperclassExtracted() {
 		super();
