@@ -52,8 +52,6 @@ public class GenericEventType extends SuperclassExtracted {
     return eventType;
   }
 
-protected String attr1;
-
 private GenericEventType() {}
 
 private void privateMethodRenamed() {

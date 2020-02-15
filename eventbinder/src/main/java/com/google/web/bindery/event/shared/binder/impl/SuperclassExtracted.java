@@ -6,6 +6,7 @@ public class SuperclassExtracted extends SuperClassExtracted2 {
 
 	private String attr2;
 	private String attr3;
+	protected String attr1;
 	public SuperclassExtracted() {
 		super();
 	}
