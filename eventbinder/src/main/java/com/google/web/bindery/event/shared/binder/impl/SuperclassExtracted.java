@@ -16,6 +16,13 @@ public class SuperclassExtracted extends GwtEvent.Type<GenericEventHandler> {
         super();
     }
 
+    public SuperclassExtracted(String attr1, String attr2, String attr3) {
+        super();
+        this.attr1 = attr1;
+        this.attr2 = attr2;
+        this.attr3 = attr3;
+    }
+
     @Override
     public boolean equals(Object obj) {
         // TODO Auto-generated method stub
@@ -44,6 +51,7 @@ public class SuperclassExtracted extends GwtEvent.Type<GenericEventHandler> {
         System.out.println("...");
         System.out.println("...");
         System.out.println("...");
+        System.out.println(getAttr1());
         System.out.println("...");
         System.out.println("Doing");
         System.out.println("something");
@@ -53,5 +61,13 @@ public class SuperclassExtracted extends GwtEvent.Type<GenericEventHandler> {
         for (String aString : listString) {
             System.out.println(aString);
         }
+    }
+
+    private String getAttr1() {
+        return attr1;
+    }
+
+    private void setAttr1(String attr1) {
+        this.attr1 = attr1;
     }
 }
