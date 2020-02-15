@@ -31,6 +31,7 @@ import java.util.Map;
  */
 public class GenericEventType extends SuperclassExtracted {
 
+  public static final String CONST = "123465789";
   private static final Map<Class<?>, GenericEventType> TYPE_MAP =
       new HashMap<Class<?>, GenericEventType>();
 
@@ -44,11 +45,11 @@ public class GenericEventType extends SuperclassExtracted {
    */
   public static <T extends GenericEvent> GenericEventType getTypeOf(Class<T> clazz) {
 
-    GenericEventType eventType = GenericEventType.TYPE_MAP.get(clazz);
+    GenericEventType eventType = TYPE_MAP.get(clazz);
 
     if (eventType == null) {
       eventType = new GenericEventType();
-      GenericEventType.TYPE_MAP.put(clazz, eventType);
+      TYPE_MAP.put(clazz, eventType);
     }
 
     return eventType;
