@@ -59,4 +59,16 @@ public class SuperclassExtracted extends GwtEvent.Type<GenericEventHandler> {
     private void setAttr1(String attr1) {
         this.attr1 = attr1;
     }
+
+    private void privateMethodRenamed() {
+        System.out.println("Doing");
+        System.out.println("something");
+        System.out.println("...");
+        System.out.println("...");
+        System.out.println("...");
+        System.out.println(getAttr1());
+        System.out.println("...");
+        System.out.println("Doing");
+        System.out.println("something");
+    }
 }
