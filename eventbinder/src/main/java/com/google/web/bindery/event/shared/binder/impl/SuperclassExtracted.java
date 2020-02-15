@@ -3,30 +3,10 @@ package com.google.web.bindery.event.shared.binder.impl;
 import java.util.List;
 
 import com.google.gwt.event.shared.GwtEvent.Type;
-import com.google.web.bindery.event.shared.binder.EventBinder;
-import com.google.web.bindery.event.shared.binder.GenericEvent;
 
 public class SuperclassExtracted extends Type<GenericEventHandler> {
 
 	public static final String CONST = "123465789";
-	/**
-	   * Creates a new EventType for the given event class. Repeated invocations of
-	   * this method for the same type will return the same object. This method is
-	   * called by generated {@link EventBinder}s and shouldn't normally have to be
-	   * called directly by users.
-	   */
-	public static <T extends GenericEvent> SuperclassExtracted getTypeOf(Class<T> clazz) {
-	    
-	    GenericEventType eventType = TYPE_MAP.get(clazz);
-	    
-	    if (eventType == null) {
-	      eventType = new GenericEventType();
-	      TYPE_MAP.put(clazz, eventType);
-	    }
-	    
-	    return eventType;
-	  }
-
 	private String attr1;
 	private String attr2;
 	private String attr3;
@@ -64,25 +44,13 @@ public class SuperclassExtracted extends Type<GenericEventHandler> {
 		}
 	}
 	
-	private void privateMethod() {
-		System.out.println("Doing");
-		System.out.println("something");
-		System.out.println("...");
-		System.out.println("...");
-		System.out.println("...");
-		System.out.println("...");
-		System.out.println(getAttr1());
-		System.out.println("Doing");
-		System.out.println("something");
-	}
-	
 	protected void protectedMethod(List<String> listString) {
 		for (String aString : listString) {
 			System.out.println(aString);
 		}
 	}
 
-	private String getAttr1() {
+	protected String getAttr1() {
 		return attr1;
 	}
 

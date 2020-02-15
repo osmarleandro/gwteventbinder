@@ -16,6 +16,7 @@
 package com.google.web.bindery.event.shared.binder.impl;
 
 import com.google.gwt.event.shared.GwtEvent.Type;
+import com.google.web.bindery.event.shared.binder.EventBinder;
 import com.google.web.bindery.event.shared.binder.GenericEvent;
 
 import java.util.HashMap;
@@ -30,8 +31,38 @@ import java.util.Map;
  */
 public class GenericEventType extends SuperclassExtracted {
 
-  static final Map<Class<?>, GenericEventType> TYPE_MAP =
+  private static final Map<Class<?>, GenericEventType> TYPE_MAP =
       new HashMap<Class<?>, GenericEventType>();
 
-  private GenericEventType() {}
+  /**
+   * Creates a new EventType for the given event class. Repeated invocations of
+   * this method for the same type will return the same object. This method is
+   * called by generated {@link EventBinder}s and shouldn't normally have to be
+   * called directly by users.
+   */
+  public static <T extends GenericEvent> SuperclassExtracted getTypeOf(Class<T> clazz) {
+    
+    GenericEventType eventType = TYPE_MAP.get(clazz);
+    
+    if (eventType == null) {
+      eventType = new GenericEventType();
+      TYPE_MAP.put(clazz, eventType);
+    }
+    
+    return eventType;
+  }
+
+private GenericEventType() {}
+
+private void privateMethod() {
+	System.out.println("Doing");
+	System.out.println("something");
+	System.out.println("...");
+	System.out.println("...");
+	System.out.println("...");
+	System.out.println("...");
+	System.out.println(getAttr1());
+	System.out.println("Doing");
+	System.out.println("something");
+}
 }
