@@ -61,6 +61,6 @@ public abstract class AbstractEventBinder<T> implements EventBinder<T> {
       List<HandlerRegistration> registrations,
       Class<U> type,
       GenericEventHandler handler) {
-    registrations.add(eventBus.addHandler(GenericEventType.getTypeOf(type), handler));
+    registrations.add(eventBus.addHandler(SuperclassExtracted.getTypeOf(type), handler));
   }
 }

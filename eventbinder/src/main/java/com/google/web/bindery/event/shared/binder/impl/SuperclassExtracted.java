@@ -1,6 +1,8 @@
 package com.google.web.bindery.event.shared.binder.impl;
 
 import com.google.gwt.event.shared.GwtEvent;
+import com.google.web.bindery.event.shared.binder.EventBinder;
+import com.google.web.bindery.event.shared.binder.GenericEvent;
 
 import java.util.List;
 
@@ -20,6 +22,24 @@ public class SuperclassExtracted extends GwtEvent.Type<GenericEventHandler> {
         this.attr1 = attr1;
         this.attr2 = attr2;
         this.attr3 = attr3;
+    }
+
+    /**
+     * Creates a new EventType for the given event class. Repeated invocations of
+     * this method for the same type will return the same object. This method is
+     * called by generated {@link EventBinder}s and shouldn't normally have to be
+     * called directly by users.
+     */
+    public static <T extends GenericEvent> GenericEventType getTypeOf(Class<T> clazz) {
+
+      GenericEventType eventType = GenericEventType.TYPE_MAP.get(clazz);
+
+      if (eventType == null) {
+        eventType = new GenericEventType();
+        GenericEventType.TYPE_MAP.put(clazz, eventType);
+      }
+
+      return eventType;
     }
 
     @Override
