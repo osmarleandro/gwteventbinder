@@ -4,7 +4,6 @@ import java.util.List;
 
 public class SuperclassExtracted extends SuperClassExtracted2 {
 
-	public static final String CONST = "123465789";
 	private String attr1;
 	private String attr2;
 	private String attr3;
