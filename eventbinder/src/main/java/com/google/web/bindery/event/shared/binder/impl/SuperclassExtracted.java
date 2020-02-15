@@ -1,13 +1,10 @@
 package com.google.web.bindery.event.shared.binder.impl;
 
-import com.google.gwt.event.shared.GwtEvent;
-import com.google.web.bindery.event.shared.binder.EventBinder;
-import com.google.web.bindery.event.shared.binder.GenericEvent;
-
 import java.util.List;
 
 public class SuperclassExtracted  extends SuperclassExtracted2{
 
+    protected String attr1;
     private String attr2;
     private String attr3;
 
