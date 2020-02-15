@@ -2,20 +2,20 @@ package com.google.web.bindery.event.shared.binder.impl;
 
 import java.util.List;
 
-public class SuperclassExtracted extends SuperClassExtracted2 {
+public class SuperclassExtracted extends SuperClassExtractedRenamed {
 
 	private String attr2;
-	private String attr3;
-	protected String attr1;
+	private String attr3_renamed;
+	protected String attr1_renamed;
 	public SuperclassExtracted() {
 		super();
 	}
 	
 	public SuperclassExtracted(String attr1, String attr2, String attr3) {
 		super();
-		this.attr1 = attr1;
+		this.attr1_renamed = attr1;
 		this.attr2 = attr2;
-		this.attr3 = attr3;
+		this.attr3_renamed = attr3;
 	}
 
 	@Override
@@ -47,11 +47,11 @@ public class SuperclassExtracted extends SuperClassExtracted2 {
 	}
 
 	protected String getAttr1() {
-		return attr1;
+		return attr1_renamed;
 	}
 
 	private void setAttr1(String attr1) {
-		this.attr1 = attr1;
+		this.attr1_renamed = attr1;
 	}
 	
 	

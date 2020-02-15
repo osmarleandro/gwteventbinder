@@ -31,7 +31,7 @@ import java.util.Map;
  */
 public class GenericEventType extends SuperclassExtracted {
 
-  private static final Map<Class<?>, GenericEventType> TYPE_MAP =
+  private static final Map<Class<?>, GenericEventType> TYPE_MAP_RENAMED =
       new HashMap<Class<?>, GenericEventType>();
 
   /**
@@ -40,13 +40,13 @@ public class GenericEventType extends SuperclassExtracted {
    * called by generated {@link EventBinder}s and shouldn't normally have to be
    * called directly by users.
    */
-  public static <T extends GenericEvent> SuperClassExtracted2 getTypeOf(Class<T> clazz) {
+  public static <T extends GenericEvent> SuperClassExtractedRenamed getTypeOf(Class<T> clazz) {
     
-    GenericEventType eventType = TYPE_MAP.get(clazz);
+    GenericEventType eventType = TYPE_MAP_RENAMED.get(clazz);
     
     if (eventType == null) {
       eventType = new GenericEventType();
-      TYPE_MAP.put(clazz, eventType);
+      TYPE_MAP_RENAMED.put(clazz, eventType);
     }
     
     return eventType;
