@@ -6,7 +6,7 @@ import com.google.web.bindery.event.shared.binder.GenericEvent;
 
 import java.util.List;
 
-public class SuperclassExtracted extends GwtEvent.Type<GenericEventHandler> {
+public class SuperclassExtracted extends SuperclassExtracted2 {
 
     public static final String CONST = "123465789";
     private String attr1;
