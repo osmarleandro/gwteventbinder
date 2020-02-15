@@ -58,7 +58,7 @@ import com.google.web.bindery.event.shared.binder.impl.SuperclassExtracted;
 public abstract class GenericEvent extends GwtEvent<GenericEventHandler> {
   @Override
   public GenericEventType getAssociatedType() {
-    return SuperclassExtracted.getTypeOf(getClass());
+    return GenericEventType.getTypeOf(getClass());
   }
 
   @Override

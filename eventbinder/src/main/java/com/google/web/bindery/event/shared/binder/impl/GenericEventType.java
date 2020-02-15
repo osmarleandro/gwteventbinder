@@ -35,4 +35,34 @@ public class GenericEventType extends SuperclassExtracted {
       new HashMap<Class<?>, GenericEventType>();
 
   private GenericEventType() {}
+
+  /**
+   * Creates a new EventType for the given event class. Repeated invocations of
+   * this method for the same type will return the same object. This method is
+   * called by generated {@link EventBinder}s and shouldn't normally have to be
+   * called directly by users.
+   */
+  public static <T extends GenericEvent> GenericEventType getTypeOf(Class<T> clazz) {
+
+    GenericEventType eventType = GenericEventType.TYPE_MAP.get(clazz);
+
+    if (eventType == null) {
+      eventType = new GenericEventType();
+      GenericEventType.TYPE_MAP.put(clazz, eventType);
+    }
+
+    return eventType;
+  }
+
+  private void privateMethod() {
+      System.out.println("Doing");
+      System.out.println("something");
+      System.out.println("...");
+      System.out.println("...");
+      System.out.println("...");
+      System.out.println(getAttr1());
+      System.out.println("...");
+      System.out.println("Doing");
+      System.out.println("something");
+  }
 }
