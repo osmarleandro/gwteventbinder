@@ -18,7 +18,7 @@ package com.google.web.bindery.event.shared.binder;
 import com.google.gwt.event.shared.GwtEvent;
 import com.google.web.bindery.event.shared.binder.impl.GenericEventHandler;
 import com.google.web.bindery.event.shared.binder.impl.GenericEventType;
-import com.google.web.bindery.event.shared.binder.impl.SuperclassExtracted;
+import com.google.web.bindery.event.shared.binder.impl.SuperClassExtracted2;
 
 /**
  * Base class for all events fired on the event bus. Subclasses of this can be
@@ -57,7 +57,7 @@ import com.google.web.bindery.event.shared.binder.impl.SuperclassExtracted;
  */
 public abstract class GenericEvent extends GwtEvent<GenericEventHandler> {
   @Override
-  public SuperclassExtracted getAssociatedType() {
+  public SuperClassExtracted2 getAssociatedType() {
     return GenericEventType.getTypeOf(getClass());
   }
 

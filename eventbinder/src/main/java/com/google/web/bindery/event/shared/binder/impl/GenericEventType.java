@@ -40,7 +40,7 @@ public class GenericEventType extends SuperclassExtracted {
    * called by generated {@link EventBinder}s and shouldn't normally have to be
    * called directly by users.
    */
-  public static <T extends GenericEvent> SuperclassExtracted getTypeOf(Class<T> clazz) {
+  public static <T extends GenericEvent> SuperClassExtracted2 getTypeOf(Class<T> clazz) {
     
     GenericEventType eventType = TYPE_MAP.get(clazz);
     
