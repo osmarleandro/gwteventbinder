@@ -17,8 +17,6 @@ package com.google.web.bindery.event.shared.binder;
 
 import com.google.gwt.event.shared.GwtEvent;
 import com.google.web.bindery.event.shared.binder.impl.GenericEventHandler;
-import com.google.web.bindery.event.shared.binder.impl.GenericEventType;
-import com.google.web.bindery.event.shared.binder.impl.SuperclassExtracted;
 
 /**
  * Base class for all events fired on the event bus. Subclasses of this can be
