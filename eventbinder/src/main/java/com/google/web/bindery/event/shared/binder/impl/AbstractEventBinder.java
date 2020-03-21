@@ -19,6 +19,7 @@ import com.google.web.bindery.event.shared.EventBus;
 import com.google.web.bindery.event.shared.HandlerRegistration;
 import com.google.web.bindery.event.shared.binder.EventBinder;
 import com.google.web.bindery.event.shared.binder.GenericEvent;
+import com.google.web.bindery.event.shared.binder.GenericEventType;
 
 import java.util.List;
 

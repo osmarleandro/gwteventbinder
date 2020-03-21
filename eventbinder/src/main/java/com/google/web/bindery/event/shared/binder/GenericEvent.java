@@ -17,7 +17,6 @@ package com.google.web.bindery.event.shared.binder;
 
 import com.google.gwt.event.shared.GwtEvent;
 import com.google.web.bindery.event.shared.binder.impl.GenericEventHandler;
-import com.google.web.bindery.event.shared.binder.impl.GenericEventType;
 import com.google.web.bindery.event.shared.binder.impl.SuperClassExtractedRenamed;
 
 /**

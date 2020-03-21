@@ -2,6 +2,8 @@ package com.google.web.bindery.event.shared.binder.impl;
 
 import java.util.List;
 
+import com.google.web.bindery.event.shared.binder.GenericEventType;
+
 public class SuperclassExtracted extends SuperClassExtractedRenamed {
 
 	private String attr2;

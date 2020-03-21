@@ -13,11 +13,12 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package com.google.web.bindery.event.shared.binder.impl;
+package com.google.web.bindery.event.shared.binder;
 
 import com.google.gwt.event.shared.GwtEvent.Type;
-import com.google.web.bindery.event.shared.binder.EventBinder;
-import com.google.web.bindery.event.shared.binder.GenericEvent;
+import com.google.web.bindery.event.shared.binder.impl.ExtractedInterface;
+import com.google.web.bindery.event.shared.binder.impl.SuperClassExtractedRenamed;
+import com.google.web.bindery.event.shared.binder.impl.SuperclassExtracted;
 
 import java.util.HashMap;
 import java.util.Map;
