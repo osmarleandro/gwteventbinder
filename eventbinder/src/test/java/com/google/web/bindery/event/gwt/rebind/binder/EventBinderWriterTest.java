@@ -49,7 +49,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Tests for {@link EventBinderWriter}. Most functionality should be covered by
+ * Tests for {@link EventBinderWriterRenamed}. Most functionality should be covered by
  * EventBinderTest; this should only check the basic output format and error
  * cases.
  * 
@@ -64,7 +64,7 @@ public class EventBinderWriterTest {
   private JClassType genericEventType;
   private Map<Class<? extends GenericEvent>, JClassType> eventTypes;
   private TypeOracle typeOracle;
-  private EventBinderWriter writer;
+  private EventBinderWriterRenamed writer;
   private SourceWriter output;
 
   @Before
@@ -73,7 +73,7 @@ public class EventBinderWriterTest {
 
     typeOracle = createTypeOracle();
     genericEventType = getEventType(GenericEvent.class);
-    writer = new EventBinderWriter(logger, genericEventType);
+    writer = new EventBinderWriterRenamed(logger, genericEventType);
     output = new StringSourceWriter();
   }
 
