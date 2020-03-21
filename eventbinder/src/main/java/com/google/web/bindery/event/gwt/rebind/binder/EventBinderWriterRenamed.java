@@ -37,12 +37,12 @@ import java.util.List;
  *
  * @author ekuefler@google.com (Erik Kuefler)
  */
-class EventBinderWriter {
+class EventBinderWriterRenamed {
 
   private final TreeLogger logger;
   private final JClassType genericEventType;
 
-  EventBinderWriter(TreeLogger logger, JClassType genericEventType) {
+  EventBinderWriterRenamed(TreeLogger logger, JClassType genericEventType) {
     this.logger = logger;
     this.genericEventType = genericEventType;
   }

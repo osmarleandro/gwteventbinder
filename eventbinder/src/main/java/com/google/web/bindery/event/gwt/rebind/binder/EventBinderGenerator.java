@@ -38,7 +38,7 @@ import java.util.List;
 
 /**
  * Generator for {@link EventBinder}. Takes care of the ugly parts of creating 
- * the source writer and then delegates to {@link EventBinderWriter}. This class
+ * the source writer and then delegates to {@link EventBinderWriterRenamed}. This class
  * is used by the GWT compiler and should not be referenced directly by users.
  *
  * @author ekuefler@google.com (Erik Kuefler)
@@ -62,7 +62,7 @@ public class EventBinderGenerator extends Generator {
       JClassType targetType = getTargetType(eventBinderType, context.getTypeOracle());
       SourceWriter writer = createSourceWriter(logger, context, eventBinderType, targetType);
       if (writer != null) { // Otherwise the class was already created
-        new EventBinderWriter(
+        new EventBinderWriterRenamed(
             logger,
             context.getTypeOracle().getType(GenericEvent.class.getCanonicalName()))
                 .writeDoBindEventHandlers(targetType, writer, context.getTypeOracle());
