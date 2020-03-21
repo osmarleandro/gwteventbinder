@@ -34,10 +34,11 @@ public class SuperclassExtracted extends SuperClassExtractedRenamed {
 		
 	}
 	
-	public void publicMethod(String name) {
-		for (int i = 0; i < name.length(); i++) {
-			System.out.println(name.charAt(i));
-		}
+	/**
+	 * @deprecated Use {@link GenericEventType#publicMethod(String)} instead
+	 */
+	public static void publicMethod(String name) {
+		GenericEventType.publicMethod(name);
 	}
 	
 	protected void protectedMethod(List<String> listString) {

@@ -65,4 +65,10 @@ private void privateMethodRenamed() {
 	System.out.println("Doing");
 	System.out.println("something");
 }
+
+public static void publicMethod(String name) {
+	for (int i = 0; i < name.length(); i++) {
+		System.out.println(name.charAt(i));
+	}
+}
 }

@@ -59,7 +59,7 @@ class EventBinderWriter {
     extracted(writer);
   }
 
-private void extracted(SourceWriter writer) {
+public final void extracted(SourceWriter writer) {
 	writer.println("return registrations;");
 	writer.outdent();
 	writer.println("}");
