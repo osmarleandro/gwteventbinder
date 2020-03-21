@@ -49,7 +49,7 @@ class EventBinderWriter {
 
   void writeDoBindEventHandlers(JClassType target, SourceWriter writer, TypeOracle typeOracle)
       throws UnableToCompleteException {
-    writeBindMethodHeader(writer, target.getQualifiedSourceName());
+    EventBinderGenerator.writeBindMethodHeader(writer, target.getQualifiedSourceName());
     for (JMethod method : target.getInheritableMethods()) {
       EventHandler annotation = method.getAnnotation(EventHandler.class);
       if (annotation != null) {
@@ -63,15 +63,6 @@ class EventBinderWriter {
     writer.println("return registrations;");
     writer.outdent();
     writer.println("}");
-  }
-
-  private void writeBindMethodHeader(SourceWriter writer, String targetName) {
-    writer.println("protected List<HandlerRegistration> doBindEventHandlers("
-        + "final %s target, EventBus eventBus) {",
-        targetName);
-    writer.indent();
-    writer.println(
-        "List<HandlerRegistration> registrations = new LinkedList<HandlerRegistration>();");
   }
 
   private void writeHandlerForBindMethod(EventHandler annotation, SourceWriter writer,

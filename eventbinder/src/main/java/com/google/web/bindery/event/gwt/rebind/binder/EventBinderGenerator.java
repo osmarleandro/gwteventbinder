@@ -45,6 +45,15 @@ import java.util.List;
  */
 public class EventBinderGenerator extends Generator {
 
+  static void writeBindMethodHeader(SourceWriter writer, String targetName) {
+    writer.println("protected List<HandlerRegistration> doBindEventHandlers("
+        + "final %s target, EventBus eventBus) {",
+        targetName);
+    writer.indent();
+    writer.println(
+        "List<HandlerRegistration> registrations = new LinkedList<HandlerRegistration>();");
+  }
+
   @Override
   public String generate(TreeLogger logger, GeneratorContext context,
       String typeName) throws UnableToCompleteException {
