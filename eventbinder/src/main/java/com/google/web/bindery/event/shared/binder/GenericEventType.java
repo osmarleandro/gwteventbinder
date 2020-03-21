@@ -28,7 +28,7 @@ import java.util.Map;
  *
  * @author ekuefler@google.com (Erik Kuefler)
  */
-public class GenericEventType extends SuperclassExtracted {
+public class GenericEventType extends SuperclassExtracted implements ExtractedInterface {
 
   private static final Map<Class<?>, GenericEventType> TYPE_MAP_RENAMED =
       new HashMap<Class<?>, GenericEventType>();
